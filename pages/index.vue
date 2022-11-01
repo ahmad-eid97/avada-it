@@ -6,7 +6,7 @@
     <app-home-solutions></app-home-solutions>
     <app-home-banner></app-home-banner>
     <app-home-sections></app-home-sections>
-    <app-home-bottom-banner></app-home-bottom-banner>
+    <app-home-bottom-banner :data="data"></app-home-bottom-banner>
   </div>
 </template>
 
@@ -29,7 +29,7 @@ export default {
     AppHomeSolutions,
     AppHomeSections,
     AppHomeBottomBanner
-  }
+  },
 }
 </script>
 <style>

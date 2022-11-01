@@ -12,15 +12,13 @@ export default {
   name: 'Services',
   components: { AppServicesHeading, AppServicesItems },
   async asyncData({ $axios }) {
-    const events = {}
-    const EVENTS_RES = await $axios.get('/services');
+    const services = {}
+    const SERVICES_RES = await $axios.get('/services');
 
-    console.log(EVENTS_RES.data.data.events)
-
-    if (EVENTS_RES.success) events = EVENTS_RES.data
+    if (SERVICES_RES.success) services = SERVICES_RES.data.data
 
     return {
-        events
+        services
     }
   },
 

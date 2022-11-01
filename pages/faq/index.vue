@@ -12,15 +12,13 @@ export default {
   name: 'Faq',
   components: { AppFaqHeading, AppFaqFaqs },
   async asyncData({ $axios }) {
-    const events = {}
-    const EVENTS_RES = await $axios.get('/faqs');
+    const faqs = {}
+    const FAQS_RES = await $axios.get('/faqs');
 
-    console.log(EVENTS_RES.data.data.events)
-
-    if (EVENTS_RES.success) events = EVENTS_RES.data
+    if (FAQS_RES.success) faqs = FAQS_RES.data.data
 
     return {
-        events
+        faqs
     }
   },
 }
